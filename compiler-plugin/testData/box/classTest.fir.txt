@@ -1,0 +1,52 @@
+FILE: classTest.kt
+    package foo.bar
+
+    @R|kotlin/Throws|() public final fun box(): R|kotlin/String| {
+        ^box R|foo/bar/Foo.Foo|(Int(1)).R|foo/bar/Foo.box|()
+    }
+    public final class Foo : R|kotlin/Any| {
+        public final var test: R|kotlin/Int|
+            public get(): R|kotlin/Int|
+            public set(value: R|kotlin/Int|): R|kotlin/Unit|
+
+        private constructor(): R|foo/bar/Foo| {
+            super<R|kotlin/Any|>()
+            this@R|foo/bar/Foo|.R|foo/bar/Foo.test| = Int(1)
+        }
+
+        @R|kotlin/Throws|() public constructor(a: R|kotlin/Int|): R|foo/bar/Foo| {
+            super<R|kotlin/Any|>()
+            this@R|foo/bar/Foo|.R|foo/bar/Foo.test| = Int(2)
+        }
+
+        internal constructor(a: R|kotlin/String|): R|foo/bar/Foo| {
+            super<R|kotlin/Any|>()
+            this@R|foo/bar/Foo|.R|foo/bar/Foo.test| = Int(3)
+        }
+
+        @R|kotlin/Throws|() public constructor(a: R|kotlin/Double|): R|foo/bar/Foo| {
+            super<R|kotlin/Any|>()
+            this@R|foo/bar/Foo|.R|foo/bar/Foo.test| = Int(4)
+        }
+
+        @R|kotlin/Throws|() public final fun box(): R|kotlin/String| {
+            ^box String(OK)
+        }
+
+        @R|kotlin/Throws|() public final fun foo(): R|kotlin/String| {
+            ^foo String(Hello world)
+        }
+
+        protected final fun bar(): R|kotlin/String| {
+            ^bar String(Hello bar)
+        }
+
+        private final fun baz(): R|kotlin/String| {
+            ^baz String(Hello baz)
+        }
+
+        internal final fun qux(): R|kotlin/String| {
+            ^qux String(Hello qux)
+        }
+
+    }

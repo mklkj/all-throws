@@ -1,0 +1,105 @@
+FILE fqName:foo.bar fileName:/classTest.kt
+  CLASS CLASS name:Foo modality:FINAL visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.Foo
+    PROPERTY name:test visibility:public modality:FINAL [var]
+      FIELD PROPERTY_BACKING_FIELD name:test type:kotlin.Int visibility:private
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-test> visibility:public modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:test visibility:public modality:FINAL [var]
+        $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='public final fun <get-test> (): kotlin.Int declared in foo.bar.Foo'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:test type:kotlin.Int visibility:private' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo.<get-test>' type=foo.bar.Foo origin=null
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<set-test> visibility:public modality:FINAL <> ($this:foo.bar.Foo, <set-?>:kotlin.Int) returnType:kotlin.Unit
+        correspondingProperty: PROPERTY name:test visibility:public modality:FINAL [var]
+        $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+        VALUE_PARAMETER name:<set-?> index:0 type:kotlin.Int
+        BLOCK_BODY
+          SET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:test type:kotlin.Int visibility:private' type=kotlin.Unit origin=null
+            receiver: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo.<set-test>' type=foo.bar.Foo origin=null
+            value: GET_VAR '<set-?>: kotlin.Int declared in foo.bar.Foo.<set-test>' type=kotlin.Int origin=null
+    CONSTRUCTOR visibility:internal <> (a:kotlin.String) returnType:foo.bar.Foo
+      VALUE_PARAMETER name:a index:0 type:kotlin.String
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Foo modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit
+        CALL 'public final fun <set-test> (<set-?>: kotlin.Int): kotlin.Unit declared in foo.bar.Foo' type=kotlin.Unit origin=EQ
+          $this: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo' type=foo.bar.Foo origin=null
+          <set-?>: CONST Int type=kotlin.Int value=3
+    CONSTRUCTOR visibility:private <> () returnType:foo.bar.Foo
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Foo modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit
+        CALL 'public final fun <set-test> (<set-?>: kotlin.Int): kotlin.Unit declared in foo.bar.Foo' type=kotlin.Unit origin=EQ
+          $this: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo' type=foo.bar.Foo origin=null
+          <set-?>: CONST Int type=kotlin.Int value=1
+    CONSTRUCTOR visibility:public <> (a:kotlin.Double) returnType:foo.bar.Foo
+      annotations:
+        Throws(exceptionClasses = [] type=kotlin.Array<out kotlin.reflect.KClass<out kotlin.Throwable>> varargElementType=kotlin.reflect.KClass<out kotlin.Throwable>)
+      VALUE_PARAMETER name:a index:0 type:kotlin.Double
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Foo modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit
+        CALL 'public final fun <set-test> (<set-?>: kotlin.Int): kotlin.Unit declared in foo.bar.Foo' type=kotlin.Unit origin=EQ
+          $this: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo' type=foo.bar.Foo origin=null
+          <set-?>: CONST Int type=kotlin.Int value=4
+    CONSTRUCTOR visibility:public <> (a:kotlin.Int) returnType:foo.bar.Foo
+      annotations:
+        Throws(exceptionClasses = [] type=kotlin.Array<out kotlin.reflect.KClass<out kotlin.Throwable>> varargElementType=kotlin.reflect.KClass<out kotlin.Throwable>)
+      VALUE_PARAMETER name:a index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:Foo modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit
+        CALL 'public final fun <set-test> (<set-?>: kotlin.Int): kotlin.Unit declared in foo.bar.Foo' type=kotlin.Unit origin=EQ
+          $this: GET_VAR '<this>: foo.bar.Foo declared in foo.bar.Foo' type=foo.bar.Foo origin=null
+          <set-?>: CONST Int type=kotlin.Int value=2
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN name:bar visibility:protected modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.String
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='protected final fun bar (): kotlin.String declared in foo.bar.Foo'
+          CONST String type=kotlin.String value="Hello bar"
+    FUN name:baz visibility:private modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.String
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='private final fun baz (): kotlin.String declared in foo.bar.Foo'
+          CONST String type=kotlin.String value="Hello baz"
+    FUN name:box visibility:public modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.String
+      annotations:
+        Throws(exceptionClasses = [] type=kotlin.Array<out kotlin.reflect.KClass<out kotlin.Throwable>> varargElementType=kotlin.reflect.KClass<out kotlin.Throwable>)
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun box (): kotlin.String declared in foo.bar.Foo'
+          CONST String type=kotlin.String value="OK"
+    FUN name:foo visibility:public modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.String
+      annotations:
+        Throws(exceptionClasses = [] type=kotlin.Array<out kotlin.reflect.KClass<out kotlin.Throwable>> varargElementType=kotlin.reflect.KClass<out kotlin.Throwable>)
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun foo (): kotlin.String declared in foo.bar.Foo'
+          CONST String type=kotlin.String value="Hello world"
+    FUN name:qux visibility:internal modality:FINAL <> ($this:foo.bar.Foo) returnType:kotlin.String
+      $this: VALUE_PARAMETER name:<this> type:foo.bar.Foo
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='internal final fun qux (): kotlin.String declared in foo.bar.Foo'
+          CONST String type=kotlin.String value="Hello qux"
+  FUN name:box visibility:public modality:FINAL <> () returnType:kotlin.String
+    annotations:
+      Throws(exceptionClasses = [] type=kotlin.Array<out kotlin.reflect.KClass<out kotlin.Throwable>> varargElementType=kotlin.reflect.KClass<out kotlin.Throwable>)
+    BLOCK_BODY
+      RETURN type=kotlin.Nothing from='public final fun box (): kotlin.String declared in foo.bar'
+        CALL 'public final fun box (): kotlin.String declared in foo.bar.Foo' type=kotlin.String origin=null
+          $this: CONSTRUCTOR_CALL 'public constructor <init> (a: kotlin.Int) declared in foo.bar.Foo' type=foo.bar.Foo origin=null
+            a: CONST Int type=kotlin.Int value=1
